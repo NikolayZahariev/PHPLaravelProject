@@ -1,0 +1,169 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    border-radius: 16px;
+    background-color: azure;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    min-width: 500px;
+    min-height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body {
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    text-align: left;
+}
+
+.modal-footer {
+    margin-top: 20px;
+}
+
+.formButtons {
+    border-radius: 9px;
+    min-height: 38px;
+    min-width: 110px;
+    font-family: "Times New Roman";
+    font-size: 135%;
+    margin: 5px;
+}
+
+.formInputField {
+    margin-left: 5px;
+}
+
+.formLabel {
+    font-family: "Times New Roman";
+    font-size: 115%;
+    min-width: 45px;
+    display: inline-block;
+}
+
+.hyperlinkButton {
+    border-radius: 10px 0px 0px 10px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #808080;
+    border: 0;
+    cursor: pointer;
+}
+
+.editDeleteButtonsContainer {
+    width: 24%;
+    height: 100%;
+    padding: 2px;
+    border-width: 1px;
+    border-style: solid;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+.hyperlinkEditButton {
+    background: url(/img/editButtonIcon.png) center no-repeat;
+    object-fit: contain;
+    background-size: 100% 100%;
+    border: 0;
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: auto;
+}
+
+.hyperlinkDeleteButton {
+    background: url(/img/deleteButtonIcon.png) center no-repeat;
+    object-fit: contain;
+    background-size: 100% 100%;
+    border: 0;
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    margin: auto;
+}
+
+.grid-hyperlinkButton {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 11px 10px 10px 11px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    min-width: 90px;
+    min-height: 55px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#buttonGridContainer {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    text-align: center;
+    align-items: center;
+    min-width: 320px;
+    min-height: 240px;
+    width: 30%;
+    height: 35%;
+}
